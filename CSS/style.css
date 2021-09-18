@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100&family=Raleway:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    width:100vw;
+    height:100vh;
+
+}
+
+
+.slide{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.slide.current{
+    opacity:1;
+    transition: opacity 0.7s ease-in-out;  
+}
+
+.content{
+    position: absolute;
+    bottom: 0px;
+    left: -900px;
+    opacity: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(900px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#prev{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    margin: 5px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin: 5px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+
+
+.slide:first-child{
+    background: url(../doc/img2.jpg) no-repeat center center/cover;
+}
+
+.slide:nth-child(2){
+    background: url(../doc/img1.png)no-repeat center center/cover;
+}
+
+.slide:nth-child(3){
+    background: url(../doc/img3.jpg) no-repeat center center/cover;
+}
+
+.slide:nth-child(4){
+    background: url(../doc/img4.jpg) no-repeat center center/cover;
+}
+
+.slide:nth-child(5){
+    background: url(../doc/img5.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(6){
+    background: url(../doc/img6.jpg) no-repeat center center/cover;
+}
